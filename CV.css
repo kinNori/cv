@@ -115,10 +115,6 @@ h2 a:hover {
     margin-top: 20px;
 }
 
-h4 {
-    color: #023e8a; margin-top: 20px;
-}
-
 h3 {
     color: #0077b6;
     margin-bottom: 10px;
@@ -179,6 +175,17 @@ h3 {
 
 /* Responsive */
 @media screen and (max-width: 700px) {
+    body {
+        background-color: #fff;
+    }
+
+    .page {
+        margin: 0;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
     .infophoto {
         flex-direction: column;
         text-align: center;
@@ -188,17 +195,259 @@ h3 {
         margin-top: 10px;
     }
 
-    .section, .competences-languages {
-        flex-direction: column;
+    .photo img {
+        width: 100px;
+        height: 100px;
     }
 
-    .sec-gauche, .sec-droite {
-        width: 100%;
+    h1.titre-cv {
+        font-size: 1.2em;
     }
 
     h2 {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
+        font-size: 1.1em;
+    }
+
+    h2 a {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .section, .competences-languages, .competences-personnelles {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sec-gauche, .sec-droite {
+        width: 100%;
+    }
+
+    .sec-gauche {
+        font-size: 0.95em;
+    }
+
+    .sec-droite {
+        font-size: 0.95em;
+    }
+
+    .detail-item {
+        padding: 15px;
+    }
+
+    .detail-item h3 {
+        font-size: 1.1em;
+    }
+
+    .detail-item h4 {
+        font-size: 1em;
+    }
+
+    .btn-retour {
+        display: block;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.95em;
+    }
+
+    .info p {
+        font-size: 0.9em;
+    }
+}
+
+/* Très petits écrans (moins de 400px) */
+@media screen and (max-width: 400px) {
+    .page {
+        padding: 15px;
+    }
+
+    h1.titre-cv {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .photo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .detail-item {
+        padding: 10px;
+    }
+
+    .sec-gauche, .sec-droite {
+        font-size: 0.9em;
+    }
+}
+
+/* Écrans ultra-petits (moins de 320px) - anciennes petites montres et très vieux téléphones */
+@media screen and (max-width: 320px) {
+    .page {
+        padding: 10px;
+    }
+
+    .infophoto {
+        padding-bottom: 10px;
+    }
+
+    .info p {
+        font-size: 0.8em;
+        margin: 3px 0;
+    }
+
+    .photo img {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #0077b6;
+    }
+
+    h1.titre-cv {
+        font-size: 0.9em;
+        line-height: 1.3;
+        margin-top: 15px;
+    }
+
+    .date-cv {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 0.95em;
+        margin-top: 25px;
+        padding-bottom: 3px;
+    }
+
+    h2 a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    h3 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    .section, .competences-languages, .competences-personnelles {
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .sec-gauche, .sec-droite {
+        font-size: 0.85em;
+    }
+
+    .titre-sec-dr {
+        font-size: 0.95em;
+    }
+
+    .duree {
+        font-size: 0.85em;
+    }
+
+    .detail-item {
+        padding: 8px;
+        margin-bottom: 20px;
+        border-left: 3px solid #0077b6;
+    }
+
+    .detail-item h3 {
+        font-size: 1em;
+    }
+
+    .detail-item h4 {
+        font-size: 0.9em;
+    }
+
+    .detail-item p {
+        font-size: 0.85em;
+        line-height: 1.5;
+    }
+
+    .detail-item ul {
+        padding-left: 15px;
+    }
+
+    .detail-item li {
+        font-size: 0.85em;
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+
+    .btn-retour {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        margin: 15px 0;
+    }
+
+    .competences-personnelles p {
+        margin: 3px 0;
+    }
+}
+
+/* Écrans minuscules (moins de 280px) - smartwatches et appareils très anciens */
+@media screen and (max-width: 280px) {
+    .page {
+        padding: 8px;
+    }
+
+    .info p {
+        font-size: 0.75em;
+    }
+
+    .photo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1.titre-cv {
+        font-size: 0.85em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    h2 a {
+        font-size: 0.75em;
+        padding: 5px 8px;
+    }
+
+    h3 {
+        font-size: 0.85em;
+    }
+
+    .sec-gauche, .sec-droite {
+        font-size: 0.8em;
+    }
+
+    .detail-item {
+        padding: 6px;
+    }
+
+    .detail-item h3 {
+        font-size: 0.95em;
+    }
+
+    .detail-item h4 {
+        font-size: 0.85em;
+    }
+
+    .detail-item p, .detail-item li {
+        font-size: 0.8em;
+    }
+
+    .btn-retour {
+        padding: 8px 12px;
+        font-size: 0.85em;
     }
 }
