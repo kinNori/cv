@@ -1,0 +1,204 @@
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: #222;
+}
+
+.page {
+    max-width: 900px;
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* En-tête */
+.infophoto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.photo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0077b6;
+}
+
+/* Titre principal */
+h1.titre-cv {
+    text-align: center;
+    color: #023e8a;
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+.date-cv {
+    font-style: italic;
+    color: #555;
+}
+
+/* Titres de section */
+h2 {
+    color: #0077b6;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 4px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 a {
+    font-size: 0.8em;
+    color: #0077b6;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+h2 a:hover {
+    background-color: #0077b6;
+    color: white;
+}
+
+/* Disposition générale */
+.section:hover, .competences-languages:hover, .competences-personnelles:hover {
+    color: #00AA00;
+}
+
+.section, .competences-languages, .competences-personnelles {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.sec-gauche {
+    width: 30%;
+    font-weight: bold;
+    color: #333;
+}
+
+.sec-droite {
+    width: 70%;
+}
+
+.titre-sec-dr {
+    font-weight: bold;
+    color: #023e8a;
+}
+
+.duree {
+    color: #555;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Compétences */
+.competences-personnelles {
+    margin-top: 20px;
+}
+
+h4 {
+    color: #023e8a; margin-top: 20px;
+}
+
+h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.competences-personnelles p {
+    margin: 4px 0;
+}
+
+/* Paragraphes */
+.section p, .competences-languages p {
+    margin: 5px 0;
+}
+
+/* Bouton retour */
+.btn-retour {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-retour:hover {
+    background-color: #023e8a;
+}
+
+/* Styles pour les pages de détails */
+.detail-content {
+    margin-top: 30px;
+}
+
+.detail-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #0077b6;
+}
+
+.detail-item h3 {
+    color: #023e8a;
+    margin-top: 0;
+}
+
+.detail-item ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.detail-item li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+    .infophoto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo {
+        margin-top: 10px;
+    }
+
+    .section, .competences-languages {
+        flex-direction: column;
+    }
+
+    .sec-gauche, .sec-droite {
+        width: 100%;
+    }
+
+    h2 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
